@@ -1,0 +1,41 @@
+// THEME COLORS
+$primary: #e40037;
+$secondary: #fff;
+$dark: #212428;
+
+// CONTAINER SIZES
+$container-max-widths: (
+	sm: 540px,
+	md: 760px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1620px,
+);
+
+// CARD
+$card-bg: rgba(255, 255, 255, 0.1);
+$card-title-color: $secondary;
+$card-color: $secondary;
+$card-border-radius: 0.95rem;
+
+// BUTTON
+$btn-padding-y: 1.25rem;
+$btn-padding-x: 1.25rem;
+$btn-border-radius: 0.95rem;
+
+// INPUT
+$input-padding-y: 1.25rem;
+$input-padding-x: 1.25rem;
+$input-border-radius: 0.95rem;
+$input-border-color: $primary;
+$input-border-width: 4px;
+$input-color: $secondary;
+$input-bg: transparent;
+$input-focus-bg: transparent;
+$input-placeholder-color: $secondary;
+
+// CAROUSEL
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-spacer: 5px;
+$carousel-indicator-transition: opacity 0.6s ease, background-color 0.6s ease;

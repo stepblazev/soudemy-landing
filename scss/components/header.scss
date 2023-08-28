@@ -1,0 +1,36 @@
+.header {
+	.navbar-toggler-icon {
+		background-image: url(../../assets/svg/menu-toggler.svg);
+		width: 35px;
+		height: 35px;
+	}
+
+	.navbar-brand {
+		font-size: 1.5rem;
+		letter-spacing: 1.3px;
+	}
+
+	.navbar-nav {
+		position: relative;
+		left: 20px;
+
+		@media (max-width: map-get($container-max-widths, xl)) {
+			position: static;
+		}
+
+		.nav-link {
+			font-size: 1.25rem;
+			color: $secondary;
+			font-weight: 500;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+
+	#download {
+		padding: 0.95rem 1.55rem;
+		font-size: 1.25rem;
+	}
+}

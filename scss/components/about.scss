@@ -1,0 +1,214 @@
+%ellipse_template {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	border: 35px solid $primary;
+	border-radius: 50%;
+	width: 750px;
+	aspect-ratio: 15 / 14;
+
+	@media (max-width: map-get($container-max-widths, xxl)) {
+		width: 535px;
+		border-width: 25px;
+	}
+
+	@media (max-width: map-get($container-max-widths, xl)) {
+		width: 400px;
+		border-width: 20px;
+	}
+
+	@media (max-width: map-get($container-max-widths, md)) {
+		width: 250px;
+		border-width: 10px;
+	}
+}
+
+.about {
+	margin-top: 90px;
+	margin-bottom: 200px;
+	position: relative;
+
+	@media (max-width: map-get($container-max-widths, sm)) {
+		margin-top: 60px;
+		margin-bottom: 100px;
+	}
+
+	&__container {
+		padding-top: 180px;
+		padding-bottom: 120px;
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+
+		&::before {
+			@extend %ellipse_template;
+			z-index: 29;
+		}
+
+		&::after {
+			@extend %ellipse_template;
+			@include AnimationSettings(FadeIn, 0.2s, 0.8s);
+			filter: blur(40px);
+			z-index: 30;
+		}
+
+		@media (max-width: map-get($container-max-widths, xxl)) {
+			padding-top: 140px;
+			padding-bottom: 50px;
+		}
+
+		@media (max-width: map-get($container-max-widths, md)) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	&__name {
+		@include AnimationSettings(SlideInLeft, 0.8s, 0.5s);
+		margin-bottom: 24px;
+		font-size: 1.85rem;
+		font-weight: 500;
+		line-height: 0;
+		letter-spacing: 1.5px;
+		color: $secondary;
+		position: relative;
+		z-index: 40;
+
+		@media (max-width: map-get($container-max-widths, xxl)) {
+			font-size: 1.3rem;
+		}
+
+		@media (max-width: map-get($container-max-widths, xl)) {
+			font-size: 1rem;
+		}
+
+		@media (max-width: map-get($container-max-widths, md)) {
+			margin-top: 52px;
+			text-align: center;
+		}
+	}
+
+	&__job-1 {
+		@include AnimationSettings(SlideInLeft, 0.8s, 0.5s);
+		margin-bottom: 20px;
+		font-size: 155px;
+		font-weight: 700;
+		letter-spacing: 7.65px;
+		text-transform: uppercase;
+		white-space: nowrap;
+		color: $secondary;
+		position: relative;
+		z-index: 10;
+
+		@media (max-width: map-get($container-max-widths, xxl)) {
+			font-size: 108px;
+		}
+
+		@media (max-width: map-get($container-max-widths, xl)) {
+			font-size: 60.5px;
+		}
+
+		@media (max-width: map-get($container-max-widths, md)) {
+			font-size: 37.5px;
+			margin-bottom: 12px;
+		}
+
+		@media (max-width: map-get($container-max-widths, sm)) {
+			font-size: 27px;
+			letter-spacing: 5px;
+		}
+	}
+
+	&__job-2 {
+		@include AnimationSettings(SlideInRight, 1.2s, 0.5s);
+		font-weight: 800;
+		font-size: 140px;
+		letter-spacing: 7.65px;
+		text-transform: uppercase;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 4px $secondary;
+		white-space: nowrap;
+		position: relative;
+		z-index: 50;
+
+		@media (max-width: map-get($container-max-widths, xxl)) {
+			font-size: 97px;
+		}
+
+		@media (max-width: map-get($container-max-widths, xl)) {
+			font-size: 54px;
+			-webkit-text-stroke-width: 2px;
+		}
+
+		@media (max-width: map-get($container-max-widths, md)) {
+			font-size: 33px;
+			-webkit-text-stroke-width: 1px;
+		}
+
+		@media (max-width: map-get($container-max-widths, sm)) {
+			font-size: 24px;
+			-webkit-text-stroke-width: 0.5px;
+			letter-spacing: 5px;
+		}
+	}
+
+	&__image {
+		@include AnimationSettings(FadeIn, 0.2s, 0.8s);
+		width: 600px;
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 0 0 270px 270px;
+		z-index: 15;
+
+		@media (max-width: map-get($container-max-widths, xxl)) {
+			width: 420px;
+		}
+
+		@media (max-width: map-get($container-max-widths, xl)) {
+			width: 300px;
+		}
+
+		@media (max-width: map-get($container-max-widths, md)) {
+			position: relative;
+			top: 30px;
+			width: 190px;
+		}
+	}
+
+	&__links {
+		display: flex;
+		gap: 20px;
+		flex-direction: column;
+		position: absolute;
+		right: 30px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@media (max-width: map-get($container-max-widths, md)) {
+			top: 30px;
+			transform: none;
+			gap: 20px;
+		}
+
+		@media (max-width: map-get($container-max-widths, sm)) {
+			margin-top: 24px;
+			position: static;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		&-link {
+			padding: 5px;
+
+			img {
+				width: 2.2rem;
+				height: 2.2rem;
+			}
+		}
+	}
+}

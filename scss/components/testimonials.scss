@@ -1,0 +1,41 @@
+.testimonials {
+	.card {
+		&-body {
+			padding: 15px;
+		}
+
+		&-img {
+			margin-right: 23px;
+			margin-bottom: 13px;
+			width: 6.25rem;
+			height: 6.25rem;
+			border-radius: 50%;
+		}
+
+		&-title {
+			font-size: 1.6rem;
+			font-weight: 600;
+			line-height: normal;
+			letter-spacing: 1.3px;
+			text-transform: capitalize;
+		}
+
+		&-subtitle {
+			color: $primary;
+			font-size: 0.8rem;
+			font-weight: 600;
+			line-height: normal;
+			letter-spacing: 0.65px;
+		}
+
+		&-text {
+			padding: 10px;
+			padding-top: 0;
+			font-family: 'Open Sans';
+			font-size: 0.875rem;
+			line-height: 22px;
+			letter-spacing: 0.77px;
+			text-transform: capitalize;
+		}
+	}
+}

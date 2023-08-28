@@ -1,0 +1,74 @@
+@import './variables';
+@import './animations';
+@import './components/browser.scss';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+* {
+	font-family: 'Poppins';
+}
+
+html {
+	font-size: 16px;
+	overflow-x: hidden;
+
+	@media (max-width: map-get($container-max-widths, lg)) {
+		font-size: 12px;
+	}
+}
+
+.section {
+	margin: 100px 0;
+}
+
+.title {
+	margin-bottom: 5px;
+	color: $secondary;
+	font-size: 2rem;
+	font-weight: 500;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: normal;
+}
+
+.subtitle {
+	color: $primary;
+	font-size: 1.1rem;
+	font-weight: 500;
+	letter-spacing: 0.9px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: normal;
+}
+
+.carousel-indicators {
+	bottom: -50px;
+	transform: translateY(100%);
+
+	button {
+		background-color: $secondary;
+		border-radius: 50%;
+
+		&.active {
+			background-color: $primary;
+		}
+	}
+}
+
+@import './components/header.scss';
+@import './components/about.scss';
+@import './components/skills.scss';
+@import './components/portfolio.scss';
+@import './components/testimonials.scss';
+@import './components/contacts.scss';
+
+.footer {
+	p {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: 0.8px;
+		text-transform: capitalize;
+		border-top: 2px solid #333;
+	}
+}

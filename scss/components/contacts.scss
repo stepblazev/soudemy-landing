@@ -1,0 +1,93 @@
+.contact {
+	&__list {
+		margin-right: 15%;
+
+		@media (max-width: map-get($container-max-widths, lg)) {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		padding: 5px;
+		display: flex;
+		gap: 20px;
+
+		&-icon {
+			padding: 10px;
+			border-right: 3px solid $secondary;
+
+			svg {
+				width: 2.2rem;
+				height: 2.2rem;
+				fill: $primary;
+
+				path {
+					fill: $primary;
+				}
+			}
+		}
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-title {
+			margin-bottom: 3px;
+			color: $primary;
+			font-weight: 500;
+			font-size: 1.15rem;
+			letter-spacing: 0.9px;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+
+		&-value {
+			margin: 0;
+			color: $secondary;
+			font-weight: 400;
+			font-size: 0.8rem;
+			line-height: normal;
+			letter-spacing: 0.65px;
+			text-transform: capitalize;
+		}
+	}
+
+	&__form {
+		@media (max-width: map-get($container-max-widths, lg)) {
+			flex-basis: 100%;
+		}
+
+		#formName {
+			margin-right: 20px;
+		}
+
+		#formMessage {
+			margin: 20px 0;
+			height: 180px;
+			resize: none;
+		}
+
+		#formName,
+		#formEmail,
+		#formMessage {
+			font-size: 1.15rem;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.9px;
+		}
+
+		#formSubmit {
+			width: 50%;
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: normal;
+			letter-spacing: 1.2px;
+
+			@media (max-width: map-get($container-max-widths, xl)) {
+				width: 100%;
+			}
+		}
+	}
+}
