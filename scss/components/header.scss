@@ -1,4 +1,10 @@
 .header {
+	@media (max-width: map-get($container-max-widths, lg)) {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+
 	.navbar-toggler-icon {
 		width: 35px;
 		height: 35px;
@@ -7,6 +13,13 @@
 	.navbar-brand {
 		font-size: 1.5rem;
 		letter-spacing: 1.3px;
+	}
+
+	.navbar-collapse {
+		@media (max-width: map-get($container-max-widths, lg)) {
+			padding: 10px;
+			position: absolute;
+		}
 	}
 
 	.navbar-nav {
